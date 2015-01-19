@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "main-controller.js",
+  "sourceRoot": "",
+  "sources": [
+    "main-controller.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA;AAAA"
+}

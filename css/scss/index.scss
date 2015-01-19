@@ -1,0 +1,92 @@
+@import "functions";
+
+$green: #02d410;
+$red: #f12a27;
+$highlight_bg: #ccc;
+$highlight_color: #272af2;
+$grey: #555;
+
+BODY {
+  font-family: 'Roboto', sans-serif;
+  font-weight:400;
+  font-size: 100%;
+  line-height: 1.2em;
+  color: #212121;
+  @include zero;
+
+  @include respondTo(desktop) { font-size: 100%; }
+  @include respondTo(retina) { font-size: 105%; }
+  @include respondTo(tablet) { font-size: 85%; }
+  @include respondTo(smallScreen) { font-size: 95%; }
+  @include respondTo(laptop) { font-size: 90%; }
+  @include respondTo(smartphone) { font-size: 85%; }
+
+}
+
+DIV	{
+  @include zero;
+}
+
+A	{
+  //text-decoration:none;
+  color: inherit;
+}
+
+H1,H2,H3,H4,H5,H6{
+  font-family: 'Quicksand', sans-serif;
+  text-transform:uppercase;
+  font-weight:700;
+  padding:0;
+  margin:0;
+}
+
+H1{font-size:2.8em;line-height:1em;letter-spacing: 4px;}
+H2{font-size:2.4em;line-height:1em;letter-spacing: 4px;}
+H3{font-size:2.0em;line-height:1em;letter-spacing: 3px;}
+H4{font-size:1.8em;line-height:1em;letter-spacing: 3px;}
+H5{font-size:1.3em;line-height:1em;letter-spacing: 2px;}
+H6{font-size:1.0em;line-height:1em;letter-spacing: 0px;display:inline-block;}
+
+.clear-fix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+}
+/* IE Mac/Win fixes below */
+.clear-fix {
+  display: inline-block; /* For IE/Mac */
+}
+/* Hides from IE/Mac \*/
+* html .clear-fix { height: 1%; }
+.clear-fix { display: block; }
+/* End hide from IE/Mac */
+
+.float-right{
+  float:right;
+}
+
+.float-left{
+  float:left;
+}
+
+.aligncenter{
+  text-align: center;
+}
+
+.alignright{
+  text-align: right;
+}
+
+.alignleft{
+  text-align: left;
+}
+
+#map{
+  width:100%;
+  height:100%;
+  background-color:#222;
+  overflow:hidden;
+}

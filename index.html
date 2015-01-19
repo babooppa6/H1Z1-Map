@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>H1Z1 Map</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+
+
+
+
+</head>
+<body>
+
+<div id="map-con">
+    <div id="map"></div>
+</div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.ui.min.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+<script>
+
+    $(document).ready(function(){
+
+        resizeMap(function(){
+            var map = L.map('map').setView([0, 0], 2);
+
+            L.tileLayer('images/maps/alpha1/full/{z}/{x}/{y}.png', {
+                maxZoom: 5,
+                attribution: 'H1Z1 Community',
+                tms: true,
+                continuousWorld: true,
+                noWrap: true,
+                reuseTiles: true
+            }).addTo(map);
+
+        });
+
+        $(window).resize(resizeMap());
+
+    });
+
+    function resizeMap($callback){
+
+        var height = window.outerHeight;
+
+        $("#map-con").css("height", height);
+
+        if(typeof $callback !== "undefined" && $callback !== null)
+            $callback();
+
+    }
+
+</script>
+
+</body>
+</html>
