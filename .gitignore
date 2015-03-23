@@ -8,6 +8,10 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+#sass and idea files
+.sass-cache
+.idea
+
 # Windows Installer files
 *.cab
 *.msi
